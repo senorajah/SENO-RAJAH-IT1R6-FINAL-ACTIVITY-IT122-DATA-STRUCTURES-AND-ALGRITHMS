@@ -1,0 +1,68 @@
+  if EMPLOYEE_NO.get() == "" or NAME.get() == "" or RATE.get() == "" or DAYS.get() == "" or GROSS.get() == "" or SSS.get() == "" or PH.get() == "" or CA.get() == "" or DEDUCTION.get() == "" or NETPAY.get() == "":
+        result = tkMessageBox.showwarning('', 'Please Complete The Required Field', icon="warning")
+
+    else:
+
+
+
+global age, address
+
+
+ or NAME.get() == "" or RATE.get() == "" or DAYS.get() == "" or GROSS.get() == "" or SSS.get() == "" or PH.get() == "" or CA.get() == "" or DEDUCTION.get() == "" or NETPAY.get() == ""
+
+
+
+ global curItem
+
+def error():
+    tkMessageBox.showerror('ERROR', 'Please complete the required field')
+
+lbl_deduction = Label(ContactForm, text="Deduction", font=('arial', 14), bd=5)
+    lbl_deduction.grid(row=4, sticky=W)
+
+
+# ===================FRAMES==============================
+    FormTitle = Frame(AddWindow)
+    FormTitle.pack(side=TOP)
+    UpdateForm = Frame(AddWindow)
+    UpdateForm.pack(side=TOP, pady=10)
+
+    # ===================LABELS==============================
+    lbl_title = Label(FormTitle, text="Adding New Contacts", font=('arial', 16), bg="#66ff66", width=300)
+    lbl_title.pack(fill=X)
+    lbl_employee_no = Label(UpdateForm, text="EMPLOYEE_NO", font=('arial', 14), bd=5)
+    lbl_employee_no.grid(row=0, sticky=W)
+    lbl_name = Label(UpdateForm, text="NAME", font=('arial', 14), bd=5)
+    lbl_name.grid(row=1, sticky=W)
+    lbl_rate = Label(UpdateForm, text="RATE", font=('arial', 14), bd=5)
+    lbl_rate.grid(row=2, sticky=W)
+    lbl_days = Label(UpdateForm, text="DAYS", font=('arial', 14), bd=5)
+    lbl_days.grid(row=3, sticky=W)
+    lbl_deduction = Label(UpdateForm, text="DEDUCTION", font=('arial', 14), bd=5)
+    lbl_deduction.grid(row=4, sticky=W)
+    lbl_sss = Label(UpdateForm, text="SSS", font=('arial', 14), bd=5)
+    lbl_sss.grid(row=5, sticky=W)
+    lbl_ph = Label(UpdateForm, text="PH", font=('arial', 14), bd=5)
+    lbl_ph.grid(row=6, sticky=W)
+    lbl_ca = Label(UpdateForm, text="CA", font=('arial', 14), bd=5)
+    lbl_ca.grid(row=5, sticky=W)
+    
+    # ===================ENTRY===============================
+    employee_no = Entry(UpdateForm, textvariable=EMPLOYEE_NO, font=('arial', 14))
+    employee_no.grid(row=0, column=1)
+    name = Entry(UpdateForm, textvariable=NAME, font=('arial', 14))
+    name.grid(row=1, column=1)
+    rate = Entry(UpdateForm, textvariable=RATE, font=('arial', 14))
+    rate.grid(row=2, column=1)
+    days = Entry(UpdateForm, textvariable=DAYS, font=('arial', 14))
+    days.grid(row=3, column=1)
+    sss = Entry(UpdateForm, textvariable=SSS, font=('arial', 14))
+    sss.grid(row=6, column=1)
+    ph = Entry(UpdateForm, textvariable=PH, font=('arial', 14))
+    ph.grid(row=7, column=1)
+    ca = Entry(UpdateForm, textvariable=CA, font=('arial', 14))
+    ca.grid(row=8, column=1)
+
+    # ==================BUTTONS==============================
+    btn_addcon = Button(UpdateForm, text="Save", width=70, command=computation2())
+    btn_addcon.grid(row=6, columnspan=2, pady=10)
